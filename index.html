@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCart.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar HTML Code -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo Section -->
+            <div class="logo">
+                <a href="#">QuickCart</a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Stationary Items</a></li>
+                        <li><a href="#">Grocery</a></li>
+                        <li><a href="#">Vegetables</a></li>
+                        <li><a href="#">Fruits</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">More...</a></li>
+
+
+                    </ul>
+                </li>
+                <li class="nav-item" ><a href="about.html">About Us</a></li>
+                <li class="nav-item" ><a href="contact.html">Contact</a></li>
+            </ul>
+         
+
+
+            <!-- Cart Icon -->
+            <div class="cart">
+                <!-- Navbar Cart Button with Tooltip -->
+         <a href="javascript:void(0)" onclick="openCart()" id="cart-link">Cart</a>
+         <span id="cart-tooltip" style="display: none; position: absolute; background-color: #333; color: #fff; padding: 5px; border-radius: 4px; font-size: 12px;">Go to Cart</span>
+
+            </div>
+
+            <!-- Burger Icon for Mobile -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+       
+
+    </header>
+    
+      <!--for diplsying the animated message-->
+      <div id="message-container"></div>
+
+    
+
+
+    <!-- Section Bar -->
+    <div class="section-bar">
+        <a href="#stationary">Stationary Items</a>
+        <a href="#grocery">Grocery</a>
+        <a href="#vegetables">Vegetables</a>
+        <a href="#fruits">Fruits</a>
+        <a href="#electronics">Electronics</a>
+    </div>
+    <!-- Cart Modal -->
+<div id="cart-modal" style="display: none; position: fixed; top: 20%; left: 50%; transform: translate(-50%, -20%); padding: 20px; border: 1px solid #333; background-color: #fff; z-index: 1000; max-width: 400px;">
+    <h3>Shopping Cart</h3>
+    <div id="cart-items"></div>
+    <p id="cart-total">Total: Rs. 0</p>
+    <button onclick="closeCart()">Close</button>
+</div>
+
+    <!-- Content -->
+    <h1>Our Products</h1>
+    <div id="stationary" class="product-section">
+        <h2>Stationary Items</h2>
+        <div class="product-container"></div>
+    </div>
+    <div id="grocery" class="product-section">
+        <h2>Grocery</h2>
+        <div class="product-container"></div>
+    </div>
+    <div id="vegetables" class="product-section">
+        <h2>Vegetables</h2>
+        <div class="product-container"></div>
+    </div>
+    <div id="fruits" class="product-section">
+        <h2>Fruits</h2>
+        <div class="product-container"></div>
+    </div>
+    <div id="electronics" class="product-section">
+        <h2>Electronics</h2>
+        <div class="product-container"></div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Cart Items</h2>
+            <ul id="cartItems"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            
+            
+           
+        </div>
+        
+        
+        <div class="footer-bottom">
+            &copy; 2024 Quick Commerce. All rights reserved.
+        </div>
+    </footer>
+    
+
+</body>
+
+</html>

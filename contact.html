@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contact - My Website</title>
+    <style>
+        /* General Styles */
+        body{
+            background-color: blanchedalmond;
+        }
+.contact-container {
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.contact-form label {
+    margin-top: 10px; /* Add space above each label */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px; /* Add padding to input fields */
+    margin-top: 5px; /* Space between label and input */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.contact-form button {
+    margin-top: 10px; /* Space above the button */
+    padding: 10px; /* Add padding */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 20px; /* Space above the contact info */
+}
+
+.social-links {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0; /* Remove padding */
+}
+
+.social-links li {
+    display: inline; /* Display links inline */
+    margin-right: 10px; /* Space between social links */
+}
+
+/* Back Link */
+.back-link {
+    text-align: center; /* Center the link */
+    margin-top: 30px; /* Space above the link */
+}
+
+.back-link a {
+    color: #007BFF; /* Link color */
+    text-decoration: underline; /* Underline the link */
+}
+
+.back-link a:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+    </style>
+</head>
+<body>
+    <body>
+        
+    
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Please fill out the form below, and we will get back to you as soon as possible.</p>
+    
+            <form class="contact-form" id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+    
+            <div class="contact-info">
+                <h2>Our Location</h2>
+                <p>
+                    [QuickCart.com] <br>
+                    4A, Raja Babu Lane, <br>
+                     West Bengal,  <br>
+                    Phone: 8273948739
+                </p>
+    
+                <h2>Follow Us</h2>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+    
+            <!-- Message Display -->
+            <div id="formMessage" class="form-message"></div>
+        </div>
+    
+        <!-- Back to Home Page Link -->
+        <p class="back-link"><a href="index.html">Back to Home Page</a></p>
+    
+        <script>
+            // JavaScript to handle form submission
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                
+                // Display a success message
+                const messageDiv = document.getElementById('formMessage');
+                messageDiv.textContent = 'Thank you for your message! We will get back to you shortly.';
+                messageDiv.style.color = 'green'; // Change the text color to green
+                
+                // Optionally, you can reset the form
+                this.reset();
+            });
+        </script>
+    </body>
+</html>
