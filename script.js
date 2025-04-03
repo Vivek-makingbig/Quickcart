@@ -4,7 +4,7 @@ const baseImageUrl = 'product/';
 // Products categorized by section with images
 const productsBySection = {
     stationary: [
-        { name: "Notebook", price: "Rs. 45", image: `${baseImageUrl}Notebook.jpeg` },
+        { name: "Notebook", price: "Rs. 45", image: `Notebook.jpeg` },
         { name: "Pen", price: "Rs. 10", image:`${baseImageUrl}Pen.jpeg` },
         { name: "Pencil", price: "Rs. 5", image: `${baseImageUrl}Pencil.jpeg` },
         { name: "Eraser", price: "Rs. 3", image: `${baseImageUrl}Eraser.jpeg` },
